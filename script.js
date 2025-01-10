@@ -19,7 +19,7 @@ closeMenuElement.addEventListener("click", (e) => {
 
 console.log('NewsApp')
 
-let main = document.querySelector('.main')
+let newsBox = document.querySelector('.news-box')
 
 
 function fetchApi() {
@@ -59,8 +59,6 @@ async function loadData() {
             title.className = 'title'
             let desc = document.createElement('div')
             desc.className = 'desc'
-            let btn = document.createElement('button')
-            btn.className = 'btn'
 
 
             img.src = element.urlToImage
@@ -70,17 +68,15 @@ async function loadData() {
             if (element.description) {
                 desc.innerText = element.description.length > 10 ? element.description.substring(0, 100) + '....' : element.description
             }
-            btn.innerText = 'Click Here'
-            btn.onclick = () => {
+            card.onclick = () => {
                 window.open(element.url, '_blank')
             }
 
 
             card.appendChild(desc)
-            card.appendChild(btn)
 
 
-            main.appendChild(card)
+            newsBox.appendChild(card)
         }
 
 
