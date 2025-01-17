@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-image: url("https://images.unsplash.com/photo-1508615121316-fe792af62a63?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     height: 100vh;
     background-repeat: no-repeat;
@@ -36,7 +36,7 @@ nav {
 
 a.main-logo {
     font-size: 20px;
-    color: #FFDBB5;
+    color: #ffdbb5;
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -99,7 +99,7 @@ input#search:focus {
 
 .hamburger {
     display: none;
-    margin-right: 20px
+    margin-right: 20px;
 }
 
 img.ham-icon {
@@ -120,7 +120,7 @@ img.close-icon {
 }
 
 @media (max-width: 992px) {
-    .menu{
+    .menu {
         display: none;
         flex-direction: column;
         background-color: #0c1011;
@@ -134,19 +134,19 @@ img.close-icon {
         gap: 20px;
     }
 
-    .menu.active{
+    .menu.active {
         display: flex;
     }
 
-    img.ham-icon.active{
+    img.ham-icon.active {
         display: block;
     }
 
-    img.close-icon.active{
+    img.close-icon.active {
         display: block;
     }
 
-    ul.nav-links{
+    ul.nav-links {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -155,12 +155,12 @@ img.close-icon {
         gap: 20px;
     }
 
-    .search-box{
+    .search-box {
         margin: 0;
         width: 70%;
     }
 
-    .hamburger{
+    .hamburger {
         display: block;
         position: absolute;
         top: 5px;
@@ -183,7 +183,7 @@ img.close-icon {
     user-select: none;
 }
 
-.card:hover{
+.card:hover {
     box-shadow: 0 0 20px rgb(227, 227, 227);
 }
 
@@ -218,7 +218,7 @@ img.image {
     height: 100vh;
 }
 
-.main{
+.main {
     overflow-y: auto;
 }
 
@@ -226,11 +226,11 @@ img.image {
     width: 8px;
 }
 
-.main::-webkit-scrollbar-thumb{
+.main::-webkit-scrollbar-thumb {
     background: #0c1011;
     border-radius: 4px;
 }
 
-.main::-webkit-scrollbar-thumb:hover{
+.main::-webkit-scrollbar-thumb:hover {
     background: white;
 }
