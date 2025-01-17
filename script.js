@@ -4,6 +4,7 @@ const menuElement = document.querySelector(".menu");
 const links = document.querySelectorAll(".links");
 const searchBox = document.querySelector(".search-box");
 const search = document.querySelector("#search");
+const loading=document.querySelector('.loader-div')
 
 openMenuElement.addEventListener("click", (e) => {
     menuElement.classList.toggle("active");
@@ -52,6 +53,7 @@ function fetchApi(keyword) {
 }
 
 async function loadData(keyword = "everything") {
+    loading.classList.remove('hidden')
     let a = await fetchApi(keyword);
     console.log("Data is:", a);
     let dataArr = a.articles;
@@ -95,7 +97,7 @@ async function loadData(keyword = "everything") {
             };
 
             card.appendChild(desc);
-
+            loading.classList.add('hidden')
             newsBox.appendChild(card);
         }
     });
